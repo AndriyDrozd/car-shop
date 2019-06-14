@@ -1,18 +1,16 @@
 <header>
   <div class="container">
     <span class="conteiner__logo">Головна</span>
-    <nav class="conteiner__main-navbar">
+    <nav class="conteiner__main-navbar" [ngClass]="{'show-navbar': toogleButton}">
       <ul class="main-navbar__main-info">
         <li><a href="">Неважливо</a></li>
         <li><a href="">Підтримка</a></li>
         <li><a href="">Автор</a></li>
+        <li><a href="">Вхід</a></li>
+        <li><a href="">Реєстрація</a></li>
       </ul>
     </nav>
-    <div class="conteiner__user-info">
-      <span class="user-info_login">Вхід</span>
-      <span class="user-info_sign-in">Реєстрація</span>
-    </div>
-    <div class="conteiner__navbar-toggle">
+    <div class="conteiner__navbar-toggle" (click)="toogleButton = !toogleButton">
       <span class="navbar-toggle__line"></span>
       <span class="navbar-toggle__line"></span>
       <span class="navbar-toggle__line"></span>
